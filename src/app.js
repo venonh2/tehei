@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose'); // para usar o mongoose como gerenciador
 require('dotenv').config();
-
+const path = require('path');
 //app
 const app = express();
 
@@ -43,10 +43,15 @@ const Mentions = require('./models/mentions');
 const Usuario = require('./models/usuario');
 //app.use('/mentions', Mentions)
 
+//ENGINE
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, 'public')));
+
 // LOAD DAS ROUTES
 const indexRoutes = require('./routes/index-routes');
 app.use('/', indexRoutes); // veja que esse é o index, então só é /
-
+//app.get('/', indexRoutes); //
 const mentionsRoutes = require('./routes/mentions-routes');
 app.use('/mentions', mentionsRoutes);
 
