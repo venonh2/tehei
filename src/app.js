@@ -40,14 +40,19 @@ process.on('SIGINT', () => {
 });
 // load models,  esta importando o mentions para que todo o programa passo usalo
 const Mentions = require('./models/mentions');
+const Usuario = require('./models/usuario');
 //app.use('/mentions', Mentions)
 
-// LOad routes
+// LOAD DAS ROUTES
 const indexRoutes = require('./routes/index-routes');
 app.use('/', indexRoutes); // veja que esse é o index, então só é /
 
 const mentionsRoutes = require('./routes/mentions-routes');
 app.use('/mentions', mentionsRoutes);
+
+// importando o usuario apra uso
+const usuarioRoutes = require('./routes/usuario-routes');
+app.use('/usuario', usuarioRoutes);
 
 
 module.exports = app;
