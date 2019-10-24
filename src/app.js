@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose'); // para usar o mongoose como gerenciador
 require('dotenv').config();
 const path = require('path');
+//const consign = require('consign'); // teste com auto laod de arquivo
 //app
 const app = express();
 
@@ -59,5 +60,13 @@ app.use('/mentions', mentionsRoutes);
 const usuarioRoutes = require('./routes/usuario-routes');
 app.use('/usuario', usuarioRoutes);
 
+// TESTE AUTO LOAD
+/* não funcional
+consign().include('models')
+  .then('controllers')
+  .then('routes')
+  .then('repositories')
+  .into(app);
+*/
 
 module.exports = app;

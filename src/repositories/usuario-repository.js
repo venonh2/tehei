@@ -5,3 +5,5 @@ exports.createUsuario = async data => { //
     const usuario = new Usuario(data);
     await usuario.save();
 };
+
+// export do usuario

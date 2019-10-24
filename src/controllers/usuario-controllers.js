@@ -18,3 +18,10 @@ exports.createUsuario = async (req, res) => { // adicionar validação depois
         res.status(500).send({ message: 'Falha ao cadastrar o usuário' });
     };
 };
+
+// exporta dos dados
+/*
+exports.getData = () => {
+    return repository;
+}
+*/
