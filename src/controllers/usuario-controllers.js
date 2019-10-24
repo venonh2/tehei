@@ -20,8 +20,7 @@ exports.createUsuario = async (req, res) => { // adicionar validação depois
 };
 
 // exporta dos dados
-/*
+
 exports.getData = () => {
     return repository;
 }
-*/

@@ -11,9 +11,11 @@ router.post('/', [
 ], usuarioController.createUsuario);
 
 // teste renderizar usuario
-router.get('/usuario', (req, res, next) =>{ // foi trocado o app.get por router.get
+router.get('/', (req, res, next) =>{ // foi trocado o app.get por router.get
     const usuarioData = usuarioController.getData();
-    res.render('usuario', usuarioData);
+    console.log(usuarioData);
+    res.render('usuario', usuarioData); // n tirar
+
 });
 
 module.exports = router;

@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json()); // esta incluindo apra ter controle que oque seja enviado apra  obanco seja modelo json
 app.use(express.urlencoded({extended: true})) // mesma coisa que acima, e a validação é feito no mentions-routes
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+//app.use(express.urlencoded({ extended: true }));
 
 //Database, configurando para conectar no atlas
 mongoose.connect(process.env.DATABASE_CONNECTION_STRING, { // veja ele dando permissão para criar classes e alterar
@@ -58,7 +58,7 @@ app.use('/mentions', mentionsRoutes);
 
 // importando o usuario apra uso
 const usuarioRoutes = require('./routes/usuario-routes');
-app.use('/usuario', usuarioRoutes);
+app.use('/usuario', usuarioRoutes); // 
 
 // TESTE AUTO LOAD
 /* não funcional
