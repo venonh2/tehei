@@ -7,8 +7,10 @@ exports.createUsuario = async data => { //
 };
 
 // teste listar
+/*
 exports.listMentions = async () => {
     const res = await Usuario.find({}, `nome email -_id`); // antes estava só find({}), ou seja traga tudo agor estamos dizendo traga só esses dois
     return res; // veja o '-_id' diz, cara não traga ele, serve para outras tbm
 };
+*/
 // export do usuario
