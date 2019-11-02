@@ -5,10 +5,10 @@ const mongoose = require('mongoose');
 
  module.exports = function (app){
      var UsuarioController = {
-         index: function (req, res) {
+         login: function (req, res) {
           //  // var usuario = req.session.usuario,
           //   params = { usuario: usuario};
-            res.redirect('/login');
+            res.render('usuario/login');
          },
          create: function(req, res) {
             res.render('usuario/create', { usuario: {} });
