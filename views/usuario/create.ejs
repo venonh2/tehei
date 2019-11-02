@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cadastro</title>
+    <link rel='stylesheet' href='../css/loginregister.css' />
+
+
+</head>
+
+
+<body>
+    <main>
+        <header>
+            <% include ../header.ejs %>
+        </header>
+        <section>
+            <div id="register">
+                <h1 class="title"> Registrar-se</h1>
+                <form action="usuario" method="post">
+                    <label for="cNome"> Nome: </label><input id="cNome" class="txtFld_user" type="text" name="usuario[nome]"
+                        placeholder="Seu nome">
+                    <br>
+                  
+                    <label for="cEmail"> Email: </label><input id="cEmail" class="txtFld_user" type="text" name="usuario[email]" placeholder="Seu Email">
+                    <br>
+                   
+                    <label for="cSenha"> Senha: </label><input id="cSenha" class="txtFld_user" type="password" name="usuario[senha]"
+                        placeholder="Sua senha">
+                    <br>
+            
+                    <button class="btn_user" type="submit">Confirmar </button>
+
+                </form>
+            </div>
+
+
+    </main>
+
+    <footer>
+        <p> Versão </p>
+    </footer>
+</body>
+
+</html>

@@ -20,13 +20,17 @@
   },
   "homepage": "https://github.com/venonh2/Mentions-api#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "consign": "^0.1.6",
+    "cookie-parser": "^1.4.4",
     "debug": "^4.1.1",
     "dotenv": "^8.2.0",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
+    "express-session": "^1.17.0",
     "express-validator": "^6.2.0",
-    "mongoose": "^5.7.5"
+    "mongoose": "^5.7.5",
+    "session": "^0.1.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
