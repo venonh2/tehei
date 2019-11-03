@@ -4,7 +4,7 @@ module.exports = function (app) {
     let HomeController = {
         index: function (req, res) {
             res.render('home/index');
-        }
+        },
       /*  login: function (req, res) {
                var email = req.body.usuario.email,
                 nome = req.body.usuario.nome;
@@ -21,6 +21,14 @@ module.exports = function (app) {
             req.session.destroy();
             res.redirect('/');
         } */
+        login: function (req, res) {
+            //  // var usuario = req.session.usuario,
+            //   params = { usuario: usuario};
+              res.render('usuario/login');
+           },
+           create: function(req, res) {
+              res.render('usuario/create', { usuario: {} });
+           }
     }; 
     return HomeController;
 };
