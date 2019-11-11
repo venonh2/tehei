@@ -1,16 +1,14 @@
 const express = require('express'); //Framework web
-const bodyParser = require('body-parser'); //Middleware para realizar o parse dos dados de formulários (request body)
-const mongoose = require('mongoose');//Persistência e modelagem do banco de dados MongoDB
-const path = require('path');//Utilitário para utilizar os caminhos de diretórios do projeto
-const consign = require('consign');//Autoload de scripts, como por exemplo models, controllers e routes
-//const methodOverride = require('method-override');//Para utilizar os verbos HTTP como PUT e DELETE
-const cookieParser = require('cookie-parser');//const flash = require('express-flash-notification');//Para gerenciar notificações de uma página para outra
-const session = require('express-session');//Para armazenar informações na sessão do cliente
-//const error = require('./middleware/error');//Middleware para mostrar páginas "amigáveis" quando ocorre um erro ou not found
-const dotenv = require('dotenv');//Utilizar as configurações de ambiente environment
-dotenv.config();//Carregar as configurações de ambiente (arquivo .env)
+const bodyParser = require('body-parser'); 
+const mongoose = require('mongoose');
+const path = require('path');
+const consign = require('consign');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const dotenv = require('dotenv');
+dotenv.config();
 
-const PORT = process.env.PORT || 3000;//A porta é definida de acordo com a variável ambiente PORT ou por padrão a porta 5000
+const PORT = process.env.PORT || 3000;
 
 //configurar e conectar no banco de dados mongo
 mongoose.connect(process.env.DATABASE_CONNECTION_STRING, { // veja ele dando permissão para criar classes e alterar
