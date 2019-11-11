@@ -12,23 +12,24 @@ module.exports = function (app) {
         },
         create: function (req, res) {
             res.render('usuario/create', { usuario: {} });
-        },
+        }, // teste 
+        
         login: function (req, res) {
             var email = req.body.usuario.email,
-                nome = req.body.usuario.nome;
-            if (email && nome) {
+                senha = req.body.usuario.senha;
+            if (email && senha) {
                 var usuario = req.body.usuario;
-                usuario['contatos'] = [];
                 req.session.usuario = usuario;
                 res.redirect('/contatos');
             } else {
                 res.redirect('/');
             }
-        },
+        },/*
         logout: function (req, res) {
             req.session.destroy();
             res.redirect('/');
         }
+        */
     }
     return UsuarioController;
 }

@@ -4,7 +4,7 @@ const mongoose = require('mongoose');//Persistência e modelagem do banco de dad
 const path = require('path');//Utilitário para utilizar os caminhos de diretórios do projeto
 const consign = require('consign');//Autoload de scripts, como por exemplo models, controllers e routes
 //const methodOverride = require('method-override');//Para utilizar os verbos HTTP como PUT e DELETE
-//const flash = require('express-flash-notification');//Para gerenciar notificações de uma página para outra
+const cookieParser = require('cookie-parser');//const flash = require('express-flash-notification');//Para gerenciar notificações de uma página para outra
 const session = require('express-session');//Para armazenar informações na sessão do cliente
 //const error = require('./middleware/error');//Middleware para mostrar páginas "amigáveis" quando ocorre um erro ou not found
 const dotenv = require('dotenv');//Utilizar as configurações de ambiente environment
@@ -48,6 +48,8 @@ global.db = mongoose.connection;
 var app = express();
 //Configurar todos os utilitários e middlewares dentro do express (variável app)
 app.use(express.static(path.join(__dirname, 'public')))
+  .use(cookieParser('ntalk'))
+  .use(session())
   .use(bodyParser.urlencoded({ extended: true }))
   .use(bodyParser.json())
   //.use(methodOverride('_method'))
