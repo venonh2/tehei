@@ -1,0 +1,73 @@
+header#cabecalho{
+    margin: -14px auto 30px auto;
+    
+    height: 80px;
+    background-repeat: no-repeat;
+    
+   /* background-color: rgb(255, 255, 255); */
+    box-shadow: 2px 2px 2px rgba(167, 165, 165, 0.781);
+}
+
+header#cabecalho img{ /* a imagem da lupa*/
+    position: relative;
+    width: 25px;
+    top: -2px;
+    left: 602px;
+}
+::placeholder{ /* mudando a cor dos text, esta geral*/
+    color: white;
+
+}
+
+nav#menu {
+  display: block;
+}
+
+nav#menu ol{
+    position: relative;
+    list-style: none;
+    top: 30px;
+    
+}
+
+nav#menu li{
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+    background-color:  rgba(18, 56, 68, 0.938);
+    color: white;
+    padding: 4px;
+    border-radius: 4px;
+}
+nav#menu li:hover{
+    background-color:  rgba(23, 72, 87, 0.938);
+}
+
+a{
+    color: rgba(245, 245, 245, 0.658);
+    text-decoration: none;
+}
+
+nav#menu a{
+    color: white;
+}
+
+nav#menu li#btn_login{ /* ajustando o botão de login no canto superior*/
+    left: 900px; /* 800 */
+    border-radius: 10px;
+    width: 60px;
+    text-align: center;
+}
+
+
+nav#menu input#txtFld_pesquisar{ /* caxa de pesquisa*/
+    position: relative;
+    top: -10px;
+    left: 600px;
+    border-radius: 3px;
+    border-color: rgba(99, 97, 97, 0.692);
+    width: 200px;
+    height: 20px;
+    background: transparent;
+}
+
