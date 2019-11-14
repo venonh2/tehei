@@ -8,23 +8,15 @@ module.exports = function (app) {
 
     var UsuarioController = { // não utilizavel
        login: function (req, res) {
-            //  // var usuario = req.session.usuario,
-            //   params = { usuario: usuario};
             res.render('usuario/login');
-           // var email = req.body.usuario.email,
-             //   senha = req.body.usuario.senha;
-           /* if (email && senha) {
-                var usuario = req.body.usuario;
-                usuario['teste'] = [];
-                req.session.usuario = usuario;
-                res.redirect('/log');
-            } else {
-                res.redirect('/');
-            } */
+    
         }, 
 
         create: function (req, res) {
             res.render('usuario/create', { usuario: {} });
+            var dados = req.body.usuario;
+            usuario = new app.models.usuario(dados);
+            usuario.save();
         }, // teste 
         
         logar: function (req, res) {
@@ -34,16 +26,17 @@ module.exports = function (app) {
                 var usuario = req.body.usuario;
                 usuario['teste'] = [];
                 req.session.usuario = usuario;
-                res.redirect('/log'); // criar
+                res.render('usuario/logado'); // redirect ?
+                
             } else {
-                res.redirect('/');
+                res.redirect('/')
             }
         }, 
         logout: function (req, res) {
             req.session.destroy();
             res.redirect('/');
-        }
-        
+        },
+       
     }
     return UsuarioController;
 }
