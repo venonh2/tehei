@@ -1,7 +1,8 @@
 header#cabecalho{
     margin: -14px auto 30px auto;
-    
+    width: 1250px;/* 1250 */
     height: 80px;
+    background-image: url('../_imagens/new.jpeg');
     background-repeat: no-repeat;
     
    /* background-color: rgb(255, 255, 255); */
@@ -32,6 +33,7 @@ nav#menu ol{
 
 nav#menu li{
     position: relative;
+    top: 15px;
     display: inline-block;
     margin-right: 15px;
     background-color:  rgba(18, 56, 68, 0.938);
@@ -59,15 +61,63 @@ nav#menu li#btn_login{ /* ajustando o botão de login no canto superior*/
     text-align: center;
 }
 
+nav#menu li#btn_sign_up{ /* ajustando o botão de login no canto superior*/
+    left: 905px; /* 800 */
+    border-radius: 10px;
+    width: 75px;
+    text-align: center;
+}
+
+
 
 nav#menu input#txtFld_pesquisar{ /* caxa de pesquisa*/
     position: relative;
-    top: -10px;
-    left: 600px;
-    border-radius: 3px;
-    border-color: rgba(99, 97, 97, 0.692);
-    width: 200px;
-    height: 20px;
-    background: transparent;
+    top: 2px;
+    background-color:transparent;
+    padding-left:4px;
+    font-style:italic;
+    font-size:18px;
+    height:25px;
+    width:200px;
+    border:none;
 }
+
+
+.footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  background-color: black;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  box-shadow: 5px 5px 5px rgba(167, 165, 165, 0.781);
+  
+}
+
+
+
+
+
+
+nav#menu div#divPesquisa{
+  position: relative;
+  top: 0px;
+  left: 600px;  
+  background-color: rgba(99, 97, 97, 0.692);;
+  border:solid 1px;
+  border-radius:10px;
+  width:240px;
+  height:30px;
+}
+
+nav#menu img#btnBusca{
+    position: absolute;
+    top: 3px;
+    left: 210px;  
+}
+
+
+ 
 

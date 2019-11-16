@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Filmes</title>
+    <link rel='stylesheet' href='../css/filme.css' />
+
+
+</head>
+
+
+<body>
+    <main>
+        <header>
+            <% include ../header.ejs %>
+        </header>
+        <section>
+            <div id="register">
+                <h1 class="title"> Adicionar Filme</h1>
+                <form action="/filme/create" method="post">
+                    <label for="cNome"> Nome: </label><input id="cNome" class="txtFld_name" type="text" name="filme[nome]"
+                    value="<%- filme.nome %>" placeholder="Nome do filme">
+                    <br>
+                  
+                    <label for="cDiretor"> Diretor: </label><input id="cDiretor" class="txtFld_name" type="text" name="filme[diretor]" value="<%- filme.diretor %>" placeholder="Nome do diretor do filme">
+                    <br>
+                   
+                    <label for="cGenero"> Genero: </label><input id="cGenero" class="txtFld_name" type="text" name="filme[genero]"
+                    value="<%- filme.genero %>" placeholder="O genero do filme">
+                    <br>
+
+                    <label for="cSinopse"> Sinopse: </label>
+                    <textarea cols="20" rows="10"  id="cSinopse" name="filme[sinopse]" class="txtFld_sinopse" type="text" placeholder="Sinopse do filme" valie= "<%- filme.sinopse %>"></textarea>
+                    <br>
+
+                    <label for="cAno"> Ano: </label><input id="cAno" class="txtFld_name" type="text" name="filme[ano]"
+                    value="<%- filme.ano %>" placeholder="Ano do filme">
+                    <br>
+                    <label for="cImagem"> Imagem: </label><input id="cImagem" class="txtFld_name" type="text" name="filme[capa]"
+                    value="<%- filme.capa %>" placeholder="Url da imagem">
+                    <br>
+            
+                    <button class="btn_filme" type="submit">Confirmar </button>
+
+                </form>
+            </div>
+
+             
+    </main>
+    <footer>
+                <% include ../footer.ejs %>
+    </footer>
+   
+</body>
+
+</html>

@@ -2,30 +2,37 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tehei</title>
     <link rel='stylesheet' href='../css/loginregister.css' />
     <link rel='stylesheet' href='../css/user.css' />
 </head>
 
 <body>
+   <main>
+       <header id="cabecalho">
+            <nav id="menu">
+                <ol>
+                    <li> <a href="/"> HOME </a> </li>
+                    <li id="btn_login"> <a href="/usuario/login"> Sair </a> </li>
+                    <li > <a>  Bem - vindo </a> </li>
+                </ol>
+               
+              <!--  <img src="_imagens/loupe.png">  AQUI VAI UM ONCLICK--> 
+            </nav>
+        </header>
+        <ul id:"user_menu">
+              <li class="liMenu"><a href="/">Home</a></li>
+              <li class="liMenu"><a href="../../filme/create">Adicionar Filme</a></li>
+              <li class="liMenu"><a href="contact.asp">Contact</a></li>
+              <li class="liMenu"><a href="about.asp">About</a></li>
+        </ul>
 
-   <!-- <p> Bem-vindo <%- usuario.nome %> </p> -->
-   <header id="cabecalho">
-    <nav id="menu">
-        <ol>
-            <li> <a href="/"> HOME </a> </li>
-            <li id="btn_login"> <a href="/usuario/login"> Sair </a> </li>
-            <li > <a>  Bem - vindo </a> </li>
-        </ol>
-        
-      <!--  <img src="_imagens/loupe.png">  AQUI VAI UM ONCLICK--> 
-    </nav>
-</header>
-
-
-
+    </main>
 <footer>
-    <p> Versão </p>
+    <% include ../footer.ejs %>
 </footer>
 </body>
 

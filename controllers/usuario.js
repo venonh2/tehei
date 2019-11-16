@@ -16,7 +16,16 @@ module.exports = function (app) {
             res.render('usuario/create', { usuario: {} });
             var dados = req.body.usuario;
             usuario = new app.models.usuario(dados);
-            usuario.save();
+            usuario.save(function (err) {
+            if (err) {
+                console.log("Error! " + err.message);
+                return err;
+            }
+            else {
+                console.log("Created user");
+                res.redirect('usuario/login');
+            }
+        });
         }, // teste 
         
         logar: function (req, res) {

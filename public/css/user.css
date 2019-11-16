@@ -71,3 +71,37 @@ nav#menu input#txtFld_pesquisar{ /* caxa de pesquisa*/
     background: transparent;
 }
 
+
+ul {
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+}
+
+ul #user_menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+}
+
+
+
+li.liMenu a{
+    background-color: #4169E1;
+    width: 200px;
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/*Esse hover ira mudar a cor quando passar o mouse*/
+li.liMenu a:hover {
+    background-color: #00008B;
+    color: white;
+}
+
+
+

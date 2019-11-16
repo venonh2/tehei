@@ -1,0 +1,70 @@
+div#register{ /* para a div de cadastro de filmes*/
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 50px;
+    width: 700px;
+    height: 400px;
+    background-color: rgba(100, 98, 98, 0.2);
+    padding: 10px;
+    box-shadow: 1px 1px 1px rgb(151, 147, 147);
+}
+
+.txtFld_name{ /*os txt de noem senha etc*/
+    align-items: flex-start;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+#cNome {
+    width: 500px;
+}
+
+#cDiretor {
+    position: relative;
+    right: 6px;
+    width: 500px;
+
+}
+
+#cGenero {
+    width: 500px;
+    position: relative;
+    right: 8px;
+    width: 500px;
+}
+
+#cSinopse {
+    position: relative;
+    right: 12px;
+    width: 500px;
+    height: 50px;
+}
+
+#cAno {
+    position: relative;
+    left: 10px;
+    width: 100px;    
+}
+
+#cImagem {
+    position: relative;
+    right: 15px;
+    width: 300px;
+}
+
+
+.txtFld_sinopse{ /*os txt de noem senha etc*/
+    margin-left: 60px;
+    margin-top: 20px;
+} 
+
+.btn_filme{
+    margin-top: 15px;
+    margin-left: 300px;
+    width: 120px;
+}
+
+.title{
+    margin-left: 300px;
+
+}
