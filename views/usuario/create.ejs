@@ -21,6 +21,18 @@
         <section>
             <div id="register">
                 <h1 class="title"> Registrar-se</h1>
+
+                <%if (typeof errors !== 'undefined' && errors.length > 0) { %>
+                    <div class="alert alert-danger">
+                        <ul>
+                            <% for(var i=0; i<errors.length; i++) {%>
+                            <li><%= errors[i].msg %></li>
+                            <% } %>
+        
+                        </ul>
+                    </div><br />
+                    <% } %>
+
                 <form action="/usuario/create" method="post">
                     <label for="cNome"> Nome: </label><input id="cNome" class="txtFld_user" type="text" name="usuario[nome]"
                     value="<%- usuario.nome %>" placeholder="Seu nome">
