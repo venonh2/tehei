@@ -5,9 +5,6 @@ module.exports = app => {
     app.get('/', home.index);
    // app.post('/entrar', home.login);
  //   app.get('/sair', home.logout); // teste
-    app.get('/usuario/login',usuario.login);
-    app.post('/usuario/login',usuario.logar);
-    app.get('/usuario/create', usuario.create);
     app.get('/filme/create', filme.create);
 
     
