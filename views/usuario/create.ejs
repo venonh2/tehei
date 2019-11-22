@@ -22,15 +22,15 @@
             <div id="register">
                 <h1 class="title"> Registrar-se</h1>
                 <form action="/usuario/create" method="post">
-                    <label for="cNome"> Nome: </label><input id="cNome" class="txtFld_user" type="text" name="usuario[nome]"
-                    value="<%- usuario.nome %>" placeholder="Seu nome">
+                    <label for="cNome"> Nome: </label><input id="cNome" class="txtFld_user" type="text" name="nome"
+                    placeholder="Seu nome">
                     <br>
                   
-                    <label for="cEmail"> Email: </label><input id="cEmail" class="txtFld_user" type="text" name="usuario[email]" value="<%- usuario.email %>" placeholder="Seu Email">
+                    <label for="cEmail"> Email: </label><input id="cEmail" class="txtFld_user" type="text" name="email"  placeholder="Seu Email">
                     <br>
                    
-                    <label for="cSenha"> Senha: </label><input id="cSenha" class="txtFld_user" type="password" name="usuario[senha]"
-                    value="<%- usuario.senha %>" placeholder="Sua senha">
+                    <label for="cSenha"> Senha: </label><input id="cSenha" class="txtFld_user" type="password" name="senha"
+                    placeholder="Sua senha">
                     <br>
             
                     <button class="btn_user" type="submit">Confirmar </button>
