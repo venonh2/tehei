@@ -35,7 +35,7 @@ module.exports = function (app) {
 
                                     newUser.save()
                                         .then(() => {
-                                            res.json({success: true, message: 'Usuario criado com sucesso', statusCode: 201 })
+                                            console.log('Usuario criado com sucesso')
                                             res.render('usuario/login');
                                         })
                                         .catch(err => res.json({success: false, message: err, statusCode:500}));
@@ -50,28 +50,32 @@ module.exports = function (app) {
         }, // teste 
         
         logar: function (req, res) {
-            var email = req.body.email,
-                senha = req.body.senha;
-            if (email && senha) {
-                var user = Usuario.findOne({ email: email });
-                if(!user) {
-                    console.log("Email incorreto");
-                }else{
-                    bcrypt.compare(senha, user.senha, function (err, res ) {
-                        if(!err){
-                            console.log("Senha invalida");
-                        }else{
-                            console.log("A combinação email e senha são corretos!" );
-                            
-                        }
-                        
-                    })
+            if (req.body.email && req.body.senha) {
+                Usuario.findOne({'email': req.body.email}).then(function(user) {
                     req.session.usuario = user.nome;
-                    res.render('usuario/logado'); // redirect ?
-                }
+                    return bcrypt.compare(req.body.senha, user.senha);
+                })
+                .then(function(samePassword) {
+                    console.log(String(samePassword));
+                    if(!samePassword) {
+                        req.session.destroy();
+                        console.log("Senha incorreta");
+                        res.status(403).send();
+                    }else{
+                    res.render('usuario/logado');
+                    console.log("A combinação email e senha são corretos!" );
+                    res.send();
+                    }
+                    
+                })
+                .catch(function(error){
+                    res.json({ success: false, message:"Esse email não está cadastrado"});
+                    console.log("Error authenticating user: ");
+                    console.log(error);
+                });
             }else {
                     res.redirect('/');
-                }
+            }
         }, 
 
         logado: function (req, res) {
