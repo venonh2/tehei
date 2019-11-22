@@ -77,14 +77,16 @@ module.exports = function (app) {
                     console.log("Email incorreto");
                 }else{
                     bcrypt.compare(senha, user.senha, function (err, res ) {
-                        if(err){
-                        console.log("Senha invalida");
+                        if(!err){
+                            console.log("Senha invalida");
                         }else{
                             console.log("A combinação email e senha são corretos!" );
-                            req.session.usuario = user.nome;
-                            res.render('usuario/logado'); // redirect ?
+                            
                         }
-                    }),
+                        
+                    })
+                    req.session.usuario = user.nome;
+                    res.render('usuario/logado'); // redirect ?
                 }
             }else {
                     res.redirect('/');
