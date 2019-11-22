@@ -97,13 +97,19 @@ nav#menu input#txtFld_pesquisar{ /* caxa de pesquisa*/
 }
 
 
-
+div#divLogo img{
+    position: relative;
+    top: -30px;
+    left: 150px; 
+    width: 150px;
+    height: 70px;
+}
 
 
 
 nav#menu div#divPesquisa{
   position: relative;
-  top: 0px;
+  top: -75px;
   left: 600px;  
   background-color: rgba(99, 97, 97, 0.692);;
   border:solid 1px;
