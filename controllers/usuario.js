@@ -1,4 +1,3 @@
-
 // novo usuario
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
