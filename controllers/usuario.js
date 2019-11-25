@@ -34,7 +34,11 @@ module.exports = function (app) {
 
                                     newUser.save()
                                         .then(() => {
+<<<<<<< HEAD
                                             console.log('Usuario criado com sucesso')
+=======
+                                            //res.json({success: true, message: 'Usuario criado com sucesso', statusCode: 201 })
+>>>>>>> 63b67b681f3ddf4410220022799f78fe16852cc9
                                             res.render('usuario/login');
                                         })
                                         .catch(err => res.json({success: false, message: err, statusCode:500}));
